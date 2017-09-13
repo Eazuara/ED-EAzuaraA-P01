@@ -18,14 +18,17 @@ public class Cinemex  {
    
      public void registrar(){
         Scanner R = new Scanner(System.in);
-        ArrayList<String> ver = new ArrayList<>();
+        
         
         String pelicula = null;
-        for(int i=0; i<7 ; i++){//For para restringir que solo van a ser 7 Salas
-            S.add(new Sala(i+1));//Numero de Sala en incremento
-        }
-        for(int j=0; j<15;j++){
+        ffor(int j = 0; j<7; j++) S.add(new Sala(j + 1));
+        for(int i = 0; i<2; i++){
+          System.out.println("Ingrese el nombre de la película.");
+            String movie = R.next();
+     }
+        for(int j=0; j<7;j++){
             System.out.println("Introduzca el nombre de la pelicula");
+         
             for(int i=0; i<7 ; i++){
             S.get(i).addFuncion(pelicula);//Se introduce la pelicula al array
             int x = S.get(i).Fetch(pelicula);
