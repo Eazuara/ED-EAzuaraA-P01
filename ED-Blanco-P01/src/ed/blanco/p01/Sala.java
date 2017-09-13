@@ -23,19 +23,14 @@ class Sala <S extends Pelicula>{
         return num;
     }
     
-    String Sort(){
-        Collections.sort(P);
-        return P.get(0).getNombre();
-    }
-    
-    void addFuncion(String nombre){
-        if(P.contains(nombre)){
+    void addFuncion(String nombre){//Metodo que se usara para añadir una Funcion a la Sala
+        if(P.contains(nombre)){ // IF para ver si la pelicula ya se encuentra en el Arreglo
             System.out.println("La Pelicula"+nombre+"ya esta en una sala");
-        }else P.add(new Pelicula(nombre));
+        }else P.add(new Pelicula(nombre));//Se Añade
     
 }
  
-    int Fetch(String nombre ){
+    int Fetch(String nombre ){ // Clase de busqueda
         for(int i=0;i<P.size();i++){
             if(P.get(i).getNombre()==nombre){
                 return i;
@@ -43,12 +38,12 @@ class Sala <S extends Pelicula>{
         }
         return -1;
     }
-    String mostViewed(){
+    String mostViewed(){//Clase para sacar la pelicula mas vista
        Collections.sort(P);
        return P.get(0).getNombre();
     }
     
-    int getVisitas(){
+    int getVisitas(){ // Metodo para recivir el NUMERO de visitas 
         return P.get(0).getVisitas();
     }
     
