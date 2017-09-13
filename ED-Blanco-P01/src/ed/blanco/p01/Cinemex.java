@@ -21,8 +21,8 @@ public class Cinemex  {
         ArrayList<String> ver = new ArrayList<>();
         
         String pelicula = null;
-        for(int i=0; i<7 ; i++){//Como son 7 salas la condicion es facil
-            S.add(new Sala(i+1));//Cada sala se identificara con el numero
+        for(int i=0; i<7 ; i++){//For para restringir que solo van a ser 7 Salas
+            S.add(new Sala(i+1));//Numero de Sala en incremento
         }
         for(int j=0; j<15;j++){
             System.out.println("Introduzca el nombre de la pelicula");
@@ -36,7 +36,7 @@ public class Cinemex  {
         }
      }
      
-     void combinacion(){
+     void combinacion(){//Metodo para sacar la Relacion Pelicula-Visitas
          for(Sala sala:S){
              System.out.println("La pelicula mas vista en la sala" + sala.getNum() + "es" + sala.mostViewed() + "con" + sala.getVisitas() + "Visitas");
          }
