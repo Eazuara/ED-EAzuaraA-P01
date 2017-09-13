@@ -14,19 +14,20 @@ public class Pelicula <S> implements Comparable<Pelicula<S>> {
     int visitas;
     
 
-    public Pelicula(String nombre) {
+    public Pelicula(String nombre, int visitas) { //Constructor de la Clase
         this.nombre = nombre;
+        this.visitas= visitas;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre) {//Setters
         this.nombre = nombre;
     }
 
-    public int getVisitas() {
+    public int getVisitas() {//Getters
         return visitas;
     }
 
@@ -35,16 +36,7 @@ public class Pelicula <S> implements Comparable<Pelicula<S>> {
     }
 
     @Override
-    public String toString() {
-        return "Pelicula{" + "nombre=" + nombre + ", visitas=" + visitas + '}';
-    }
-
-    
-    
-    
-
-    @Override
-    public int compareTo(Pelicula<S> o) {
+    public int compareTo(Pelicula<S> o) {//Metodo de compareTO para las visitas
      if(this.getVisitas()<o.getVisitas()){ 
             return 1;                           
         }
