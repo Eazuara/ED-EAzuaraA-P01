@@ -14,11 +14,9 @@ public class Pelicula <S> implements Comparable<Pelicula<S>> {
     int visitas;
     
 
-    public Pelicula(String nombre, int visitas) { //Constructor de la Clase
-        this.nombre = nombre;
-        this.visitas= visitas;
+     Pelicula(String nombre) {//Constructor de la clase
+        this.nombre=nombre;
     }
-
     public String getNombre() {
         return nombre;
     }
